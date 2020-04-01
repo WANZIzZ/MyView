@@ -1,4 +1,4 @@
-## 自定义 View 1-2 Paint 详解
+## 自定义 View 1-1 绘制基础
 
 [文章链接](https://hencoder.com/ui-1-1/)
 
