@@ -43,7 +43,7 @@ class StrokeMiterView : View {
 
         canvas.translate(300f, 0f)
 
-        paint.strokeMiter = 2f
+        paint.strokeMiter = 0f
         path.let {
             it.lineTo(200f, 0f)
             it.rLineTo(0f, 150f)
@@ -53,7 +53,7 @@ class StrokeMiterView : View {
 
         canvas.translate(300f, 0f)
 
-        paint.strokeMiter = 5f
+        paint.strokeMiter = 1.6f
         path.let {
             it.lineTo(200f, 0f)
             it.rLineTo(0f, 150f)
