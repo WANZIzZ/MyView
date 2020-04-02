@@ -161,7 +161,7 @@ class ShowTextView : View {
             drawText(text5, paint.measureText(text4), 0f, paint2)
             drawText(text6, paint.measureText(text4) + paint2.measureText(text5), 0f, paint)
 
-            // 使用 Paint.getTextBounds() 计算出文字的显示区域
+
             translate(0f, paint.fontSpacing)
 
             paint.style = Paint.Style.STROKE
@@ -171,21 +171,36 @@ class ShowTextView : View {
 
             paint3.textSize = 160f
 
-            paint3.getTextBounds(text7, 0, text7.length, rect7)
+            // 使用 Paint.getTextBounds() 计算出文字的显示区域
+            // 这种居中算法的优点是，可以让文字精准地居中，分毫不差
+
+            /*paint3.getTextBounds(text7, 0, text7.length, rect7)
             paint3.getTextBounds(text8, 0, text8.length, rect8)
             paint3.getTextBounds(text9, 0, text9.length, rect9)
             paint3.getTextBounds(text10, 0, text10.length, rect10)
             paint3.getTextBounds(text11, 0, text11.length, rect11)
             paint3.getTextBounds(text12, 0, text12.length, rect12)
 
-            Log.d("Wanzi", "bottom:${rect7.bottom} top:${rect7.top}")
-
             drawText(text7, 10f, (200f - (rect7.bottom + rect7.top)) / 2, paint3)
             drawText(text8, 110f, (200f - (rect8.bottom + rect8.top)) / 2, paint3)
             drawText(text9, 210f, (200f - (rect9.bottom + rect9.top)) / 2, paint3)
             drawText(text10, 310f, (200f - (rect10.bottom + rect10.top)) / 2, paint3)
             drawText(text11, 410f, (200f - (rect11.bottom + rect11.top)) / 2, paint3)
-            drawText(text12, 510f, (200f - (rect12.bottom + rect12.top)) / 2, paint3)
+            drawText(text12, 510f, (200f - (rect12.bottom + rect12.top)) / 2, paint3)*/
+
+
+            // 使用 Paint.getFontMetrics() 计算出文字的显示区域
+            // 这种居中算法的优点是，可以让不同的文字的 baseline 对齐
+
+            val fontMetrics = (paint3.fontMetrics.descent + paint3.fontMetrics.ascent)
+            val y = (200f - fontMetrics) / 2
+
+            drawText(text7, 10f, y, paint3)
+            drawText(text8, 110f, y, paint3)
+            drawText(text9, 210f, y, paint3)
+            drawText(text10, 310f, y, paint3)
+            drawText(text11, 410f, y, paint3)
+            drawText(text12, 510f, y, paint3)
 
         }
     }

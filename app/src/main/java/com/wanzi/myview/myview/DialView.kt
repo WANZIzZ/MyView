@@ -3,6 +3,7 @@ package com.wanzi.myview.myview
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 
 /**
@@ -27,7 +28,7 @@ class DialView : View {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        canvas.translate((width / 2).toFloat(), (height / 2).toFloat())
+        /*canvas.translate((width / 2).toFloat(), (height / 2).toFloat())
 
         paint.style = Paint.Style.STROKE
         //  paint.shader = shader
@@ -41,7 +42,33 @@ class DialView : View {
             canvas.drawArc(-300f, -300f, 300f, 300f, 0f, 5f, true, paint)
         }
 
-        canvas.drawPath(path, paint)
+        canvas.drawPath(path, paint)*/
+
+        canvas.translate(300f, 300f)
+
+        paint.textSize = 200f
+
+        val bounds1 = Rect()
+        paint.getTextBounds("j", 0, 1, bounds1)
+
+        Log.d("Wanzi", "height:${bounds1.height()}")
+        Log.d("Wanzi", "top:${bounds1.top} bottom:${bounds1.bottom}")
+
+        val bounds2 = Rect()
+        paint.getTextBounds("i", 0, 1, bounds2)
+
+        Log.d("Wanzi", "height:${bounds2.height()}")
+        Log.d("Wanzi", "top:${bounds2.top} bottom:${bounds2.bottom}")
+
+        canvas.drawLine(0f, 0f, 500f, 0f, paint)
+        canvas.drawLine(0f, 0f, 0f, 500f, paint)
+        canvas.drawLine(0f, -50f, 500f, -50f, paint)
+
+        canvas.drawText("j", 50f, (102 / 2).toFloat(), paint)
+        canvas.drawText("j", 100f, (bounds1.height() / 2).toFloat(), paint)
+        canvas.drawText("j", 150f, 0f, paint)
+        canvas.drawText("i", 200f, (bounds2.height() / 2).toFloat(), paint)
+        canvas.drawText("i", 250f, 0f, paint)
     }
 
 }
