@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.wanzi.myview.practicedraw4.CameraRotateView
+    <com.wanzi.myview.myview.ClipRgnView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
