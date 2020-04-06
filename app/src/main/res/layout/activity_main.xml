@@ -5,8 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.wanzi.myview.practicedraw4.CameraRotateView
+    <com.wanzi.myview.practicedraw5.DispatchDrawLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/batman" />
+
+    </com.wanzi.myview.practicedraw5.DispatchDrawLayout>
 
 </LinearLayout>
