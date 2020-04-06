@@ -23,3 +23,9 @@
 [作业链接](https://github.com/hencoder/PracticeDraw4)
 
 > 这个作业中的第14题未完成
+
+## 自定义 View 1-5 绘制顺序
+
+[文章链接](https://hencoder.com/ui-1-5/)
+
+[作业链接](https://github.com/hencoder/PracticeDraw5)
