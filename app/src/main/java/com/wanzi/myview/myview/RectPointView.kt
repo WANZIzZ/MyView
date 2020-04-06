@@ -19,7 +19,7 @@ import android.view.View
 class RectPointView : View {
 
     private var mPaint: Paint = Paint()
-    private lateinit var mRect: Rect
+    private var mRect: Rect
     private var mX = -1f
     private var mY = -1f
 

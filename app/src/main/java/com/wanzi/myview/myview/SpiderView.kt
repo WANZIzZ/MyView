@@ -48,7 +48,7 @@ class SpiderView : View {
     /**
      * 数据
      */
-    private val data = arrayOf(2,5,1,6,4,5)
+    private val data = arrayOf(2, 5, 1, 6, 4, 5)
 
     private val radarPaint = Paint().apply {
         style = Paint.Style.STROKE
