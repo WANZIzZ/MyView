@@ -15,3 +15,11 @@
 [文章链接](https://hencoder.com/ui-1-3/)
 
 [作业链接](https://github.com/hencoder/PracticeDraw3)
+
+## 自定义 View 1-4 Canvas 对绘制的辅助 clipXXX() 和 Matrix
+
+[文章链接](https://hencoder.com/ui-1-4/)
+
+[作业链接](https://github.com/hencoder/PracticeDraw4)
+
+> 这个作业中的第14题未完成
