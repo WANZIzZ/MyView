@@ -29,9 +29,13 @@
         android:foreground="#88000000"
         android:src="@drawable/batman" />-->
 
-    <com.wanzi.myview.practicedraw5.BeforeDrawView
+    <!-- <com.wanzi.myview.practicedraw5.BeforeDrawView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:text="Hello World" />-->
+
+    <com.wanzi.myview.myview.pathmeasure.GetSegmentView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello World" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
